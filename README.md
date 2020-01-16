@@ -1,4 +1,4 @@
-# calculadora-hipoteca
+# Simulador-hipoteca
 
 > A Vue.js project
 
