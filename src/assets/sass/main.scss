@@ -1,0 +1,59 @@
+// 1. Import the initial variables
+@import "~bulma/sass/utilities/initial-variables";
+
+@import "~bulma/sass/utilities/functions";
+
+
+// 2. Set your own initial variables
+// Update blue
+$blue: #00a632;
+// Add green and its invert
+$green: #00a632;
+$green-invert: #fff;
+// Add a serif family
+$family-serif: "Playfair Display", "Georgia", serif;
+$family-sans-serif: "Arial", "Bitter", sans-serif;
+
+// 3. Set the derived variables
+// Use the new green as the primary color
+$primary: $green;
+$primary-invert: $green-invert;
+// Use the existing orange as the danger color
+$danger: $orange;
+// Use the new serif family
+$family-primary: $family-serif;
+
+// 4. Setup your Custom Colors
+$linkedin: #0077b5;
+$linkedin-invert: findColorInvert($linkedin);
+$twitter: #55acee;
+$twitter-invert: findColorInvert($twitter);
+$github: #333;
+$github-invert: findColorInvert($github);
+
+// 5. Add new color variables to the color map.
+@import "~bulma/sass/utilities/derived-variables";
+$addColors: (
+  "twitter":($twitter, $twitter-invert),
+  "linkedin": ($linkedin, $linkedin-invert),
+  "github": ($github, $github-invert)
+);
+$colors: map-merge($colors, $addColors);
+$control-padding-vertical:	calc(0.375em - 1px);
+$label-color:	#000;
+$label-weight:	$weight-light;
+// 6. Import the rest of Bulma
+
+$divider-background-color: $green;
+$divider-font-size:	$size-7;
+$divider-color:	$green;
+
+
+
+@import '~bulma/bulma';
+
+@import '~bulma-extensions/bulma-tooltip/dist/bulma-tooltip';
+
+@import '~animate.css/animate';
+
+
